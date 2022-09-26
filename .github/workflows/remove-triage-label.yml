@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - env:
-          TRY_GET_LABELS: github.event.issue.labels
+          TRY_GET_LABELS: ${{ github.event.issue.labels }}
         run: |
           echo $TRY_GET_LABELS
