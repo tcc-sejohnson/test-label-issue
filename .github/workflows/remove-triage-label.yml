@@ -10,7 +10,6 @@ jobs:
     name: "Remove triage label if issue is assigned"
     runs-on: ubuntu-latest
     steps:
-      - env:
-          TRY_GET_LABELS: ${{ toJSON(github.event.issue.labels) }}
+      - if: ${{ contains(github.event.issue.labels.*.name, 'needs triage') && contains(github.event.issue.labels.*.name, 'kind: papercut') }}
         run: |
-          echo $TRY_GET_LABELS
+          echo 'this should run'
