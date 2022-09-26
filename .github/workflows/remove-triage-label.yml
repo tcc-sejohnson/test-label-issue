@@ -12,5 +12,5 @@ jobs:
     steps:
       - env:
         TRY_GET_LABELS: github.event.issue.labels
-    run: |
-      echo $TRY_GET_LABELS
+      run: |
+        echo $TRY_GET_LABELS
