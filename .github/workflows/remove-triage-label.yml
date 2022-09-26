@@ -10,7 +10,7 @@ jobs:
     name: "Remove triage label if issue is assigned"
     runs-on: ubuntu-latest
     steps:
-      - env:
+      env:
         TRY_GET_LABELS: github.event.issue.labels
       run: |
         echo $TRY_GET_LABELS
